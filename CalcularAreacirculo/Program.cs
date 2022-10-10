@@ -10,7 +10,13 @@ namespace CalcularAreacirculo
     {
         static void Main(string[] args)
         {
+            //Practica1();
+            Practica2();
+        }
 
+        #region Practica1     
+        static void Practica1()
+        {
             //Console.WriteLine("¡Hola mundo!");
 
             ///int edad = 25;
@@ -29,9 +35,39 @@ namespace CalcularAreacirculo
             double area = PI * Math.Pow(radio, 2);
 
             Console.WriteLine($"Tu area del circulo de radio {radio} es {area}");
+        }
+        #endregion
 
+        #region Practica2
+        static void Practica2()
+        {
+            Console.WriteLine("¿Cuantos años tienes?");
+            int edad = int.Parse(Console.ReadLine());
+
+
+            if (edad <= 18)
+            {
+                Console.WriteLine("No puedes conducir");
+            }
+            if (edad >= 18)
+            {
+                Console.WriteLine("¿Tienes carnet de conducir?(S/N)");
+
+                string respuesta = Console.ReadLine();
+                if (respuesta.Equals("S"))
+                {
+
+                    Console.WriteLine("Puedes conducir");
+                } else {
+                    Console.WriteLine("No puedes conducir");
+                        }
+            }
 
 
         }
+
+
+
+        #endregion
     }
 }
